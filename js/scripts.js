@@ -8,8 +8,8 @@ function Pizza(size, toppings) {
   this.price = 0;
 }
 
-Pizza.prototype.addPrice = function (cost) {
-  return this.orders = cost
+Pizza.prototype.addPrice = function (smallCost) {
+  return this.orders = smallCost
 }
 
 Pizza.prototype.smallPrice = function () {
