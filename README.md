@@ -36,3 +36,15 @@ Expected Output:
   toppings: "pepperoni"
   price: 10
 }
+
+Describe mediumPrice()
+Test: It will return the cost of a medium pizza and toppings as 12.
+Code: 
+let newPizza = new Pizza("medium", ["pepperoni"])
+newPizza.mediumPrice();
+Expected Output:
+{
+  size: "medium"
+  toppings: "pepperoni"
+  price: 12
+}
