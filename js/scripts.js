@@ -4,6 +4,9 @@
 function Pizza(size, toppings, price) {
   this.size = size
   this.toppings = toppings
-  this.price = price
+}
+
+Pizza.prototype.price = function (cost) {
+  this["cost"] = cost
 }
 // -----User Interface Logic-----
