@@ -1,41 +1,46 @@
 // -----Utility Logic-----
 
 // -----Business Logic-----
-function Pizza(size, toppings) {
+function Orders() {
   this.pizzaPrice = {};
-  this.size = size;
-  this.toppings = toppings;
   this.price = 0;
 }
 
-Pizza.prototype.addPrice = function (cost) {
+Orders.prototype.addPrice = function (cost) {
   this.pizzaPrice[cost] = cost
 }
 
-Pizza.prototype.smallPrice = function () {
+Orders.prototype.smallPrice = function () {
   this.price += 10;
   return this.price;
 }
 
-Pizza.prototype.mediumPrice = function () {
+Orders.prototype.mediumPrice = function () {
   this.price += 10;
   return this.price;
 }
 
-Pizza.prototype.largePrice = function () {
+Orders.prototype.largePrice = function () {
   this.price += 10;
   return this.price;
 }
+function Pizza(size, toppings) {
+  this.size = size;
+  this.toppings = toppings;
+}
+
+
 
 // -----User Interface Logic-----
-function displayPrice(priceToDisplay) {
-  let results = $("#total");
-  let htmlForPizzaPrice = "";
-  Object.keys(priceToDisplay.addPrice).forEach
-    (function (key) {
-      const
-    })
-}
+// function displayPrice(priceToDisplay) {
+//   let results = $("#total");
+//   let htmlForPizzaPrice = "";
+//   Object.keys(priceToDisplay.pizzaPrice).forEach(function (key) {
+//     const pizzaCost = priceToDisplay.addPrice(key)
+//     htmlForPizzaPrice = pizzaCost.price
+//   })
+//   results.html(htmlForPizzaPrice)
+// }
 
 $(document).ready(function () {
   let newPizza = new Pizza();
@@ -55,5 +60,6 @@ $(document).ready(function () {
 
     }
   })
-  newPizza.addPrice();
+  // newPizza.addPrice();
+  // displayPrice(newPizza);
 })

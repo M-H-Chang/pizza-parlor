@@ -12,12 +12,23 @@ Expected Output:
  myPizza.size;
  "medium"
 
-Describe Pizza.prototype.price
+ Describe Orders()
+ Test: It will have an empty object that will store all of our orders
+ Code:
+ Orders() {
+   pizzaPrice = {};
+ }
+ Expected Output:
+ {
+   {[10, 20]}
+ }
+
+Describe Pizza.prototype.addPrice
 Test: It will take the size of the pizza and topping of a pizza and add them together for the price.
 Code:
 const newPizza = new Pizza("medium", ["pepperoni"])
 const cost = 10
-newPizza.price(cost);
+newPizza.addPrice(cost);
 Expected Output:
 {
   size: "medium"
