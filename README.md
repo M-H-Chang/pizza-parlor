@@ -23,6 +23,14 @@ Expected Output:
    {[10, 20]}
  }
 
+ Describe Orders.prototype.assignId
+ Test: It will add an id of +1 everytime you order
+ Code: pizza.assignId(cheese-pizza)
+ Expected Output: 
+ {
+   {cheese-pizza(1)}
+ }
+
 Describe Pizza.prototype.addPrice
 Test: It will take the size of the pizza and topping of a pizza and add them together for the price.
 Code:

@@ -4,6 +4,12 @@
 function Orders() {
   this.pizzaPrice = {};
   this.price = 0;
+  this.currentId = 0;
+}
+
+Orders.prototype.assignId = function () {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 Orders.prototype.addPrice = function (cost) {
@@ -24,10 +30,16 @@ Orders.prototype.largePrice = function () {
   this.price += 10;
   return this.price;
 }
-function Pizza(size, toppings) {
+function Pizza(size, toppings, price) {
   this.size = size;
   this.toppings = toppings;
+  this.price = price;
 }
+
+Pizza.prototype.entireOrder = function () {
+  return this.size + " " + this.price;
+}
+
 
 
 
