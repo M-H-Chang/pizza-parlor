@@ -48,3 +48,15 @@ Expected Output:
   toppings: "pepperoni"
   price: 12
 }
+
+Describe largePrice()
+Test: It will return the cost of a large pizza and toppings as 14.
+Code: 
+let newPizza = new Pizza("large", ["pepperoni"])
+newPizza.largePrice();
+Expected Output:
+{
+  size: "large"
+  toppings: "pepperoni"
+  price: 14
+}
