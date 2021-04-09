@@ -15,21 +15,20 @@
 <body>
   <div class="container">
     <h1>Welcome To Epicodus Pizza Parlor</h1>
-
     <h2>Order Below</h2>
     <form class="form-control" id="form">
       <div class="form-group">
         <label for="size">Please Select A Size:
-          <input type="radio" class="size" id="small">
+          <input type="radio" value="smallSize" class="size" id="small">
           <label for="size">Small</label>
-          <input type="radio" class="size" id="medium">
+          <input type="radio" value="mediumSize" class="size" id="medium">
           <label for="size">Medium</label>
-          <input type="radio" class="size" id="large">
+          <input type="radio" value="largeSize" class="size" id="large">
           <label for="size">Large</label>
         </label>
       </div>
       <div class="form-group">
-        <label for="">Please Select Toppings(Any/unlimited toppings $4):
+        <label for="">Please Select Toppings (Any/unlimited toppings $4):
           <input type="checkbox" class="toppings" id="pepperoni">
           <label for="pepperoni">Pepperoni</label>
           <input type="checkbox" class="toppings" id="olives">
@@ -42,9 +41,10 @@
           <label for="cilantro">Cilantro</label>
         </label>
       </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+      <p>Total: <span id="total"></span></p>
     </form>
   </div>
-
 </body>
 
 </html>

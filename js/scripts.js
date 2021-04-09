@@ -2,13 +2,14 @@
 
 // -----Business Logic-----
 function Pizza(size, toppings) {
+  this.pizzaPrice = {};
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
 }
 
 Pizza.prototype.addPrice = function (cost) {
-  return this.price = cost
+  this.pizzaPrice[cost] = cost
 }
 
 Pizza.prototype.smallPrice = function () {
@@ -16,17 +17,43 @@ Pizza.prototype.smallPrice = function () {
   return this.price;
 }
 
-// function CalculatePrice(small, medium, large, topping) {
-//   this.small = small
-//   this.medium = medium
-//   this.large = large
-//   this.topping = topping
-// }
+Pizza.prototype.mediumPrice = function () {
+  this.price += 10;
+  return this.price;
+}
 
-// CalculatePrice.prototype.small = function (small) {
-//   const price = 6
-//   return small = price
-// }
-
+Pizza.prototype.largePrice = function () {
+  this.price += 10;
+  return this.price;
+}
 
 // -----User Interface Logic-----
+function displayPrice(priceToDisplay) {
+  let results = $("#total");
+  let htmlForPizzaPrice = "";
+  Object.keys(priceToDisplay.addPrice).forEach
+    (function (key) {
+      const
+    })
+}
+
+$(document).ready(function () {
+  let newPizza = new Pizza();
+  $("form#form").submit(function (event) {
+    event.preventDefault();
+    const small = $("input:radio[id=small]:checked").val();
+    const medium = $("input:radio[id=medium]:checked").val();
+    const large = $("input:radio[id=large]:checked").val();
+    let price;
+    if (small === "smallSize") {
+      newPizza.addPrice();
+    } else if (medium === "mediumSize") {
+      newPizza.addPrice();
+    } else if (large === "largeSize") {
+      newPizza.addPrice();
+    } else {
+
+    }
+  })
+  newPizza.addPrice();
+})
