@@ -2,26 +2,31 @@
 
 // -----Business Logic-----
 function Pizza(size, toppings) {
-  this.size = size
-  this.toppings = toppings
-  this.price = price
+  this.size = size;
+  this.toppings = toppings;
+  this.price = 0;
 }
 
-Pizza.prototype.price = function (cost) {
-  return this["price"] = cost
+Pizza.prototype.addPrice = function (cost) {
+  return this.price = cost
 }
 
-function CalculatePrice(small, medium, large, topping) {
-  this.small = small
-  this.medium = medium
-  this.large = large
-  this.topping = topping
+Pizza.prototype.smallPrice = function () {
+  this.price += 10;
+  return this.price;
 }
 
-CalculatePrice.prototype.small = function (small) {
-  const price = 6
-  return small = price
-}
+// function CalculatePrice(small, medium, large, topping) {
+//   this.small = small
+//   this.medium = medium
+//   this.large = large
+//   this.topping = topping
+// }
+
+// CalculatePrice.prototype.small = function (small) {
+//   const price = 6
+//   return small = price
+// }
 
 
 // -----User Interface Logic-----

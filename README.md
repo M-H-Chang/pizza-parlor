@@ -24,3 +24,15 @@ Expected Output:
   toppings: "pepperoni"
   cost: 10
 }
+
+Describe smallPrice()
+Test: It will return the cost of a small pizza and toppings as 10.
+Code: 
+let newPizza = new Pizza("small", ["pepperoni"])
+newPizza.smallPrice();
+Expected Output:
+{
+  size: "small"
+  toppings: "pepperoni"
+  price: 10
+}
