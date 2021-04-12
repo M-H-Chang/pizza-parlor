@@ -30,13 +30,8 @@ function Pizza(size, topping) {
   this.topping = topping;
 }  // use this for the display price function
 
-CalculatePrice.prototype.small = function (small) {
-  const price = 6
-  return small = price
-}
-
-
 // -----User Interface Logic-----
+let newPizzaOrder = new Pizza()
 function displayPrice(priceToDisplay) {
   let priceList = $("#total");
   let htmlForPrice = "";
@@ -50,6 +45,10 @@ function displayPrice(priceToDisplay) {
 $(document).ready(function () {
   $("#form").submit(function (event) {
     event.preventDefault();
+    const radio = $("input:radio[name=type]:checked").val();
 
+    let newOrder = new Pizza(radio)
+    newPizzaOrder.addPrice(newOrder)
+    displayPrice(newPizzaOrder);
   })
 })
