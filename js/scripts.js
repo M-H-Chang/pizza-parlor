@@ -1,10 +1,8 @@
 // -----Utility Logic-----
 
 // -----Business Logic-----
-function Pizza(size, toppings) {
+function Order() {
   this.orders = {};
-  this.size = size;
-  this.toppings = toppings;
   this.price = 0;
 }
 
@@ -27,10 +25,10 @@ Pizza.prototype.addPrice = function (price) {
 //   return this.price;
 // }
 
-// function Order(size, topping) {
-//   this.size = size;
-//   this.topping = topping;
-// }  // use this for the display price function
+function Pizza(size, topping) {
+  this.size = size;
+  this.topping = topping;
+}  // use this for the display price function
 
 CalculatePrice.prototype.small = function (small) {
   const price = 6
@@ -49,13 +47,9 @@ function displayPrice(priceToDisplay) {
   priceList.html(htmlForPrice);
 }
 
-$(documnet).ready(function () {
+$(document).ready(function () {
   $("#form").submit(function (event) {
     event.preventDefault();
-    const small
-    const medium
-    const largePrice
-
 
   })
 })
