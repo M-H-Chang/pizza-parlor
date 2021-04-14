@@ -14,7 +14,6 @@ Pizza.prototype.addPrice = function (price) {
 $(document).ready(function () {
   $("#form").submit(function (event) {
     event.preventDefault();
-    let newPizzaOrder = new Pizza()
     let newOrders = [];
     const radio = $("input:radio[name=type]:checked").val();
     if (radio == "small") {
@@ -27,6 +26,5 @@ $(document).ready(function () {
       return alert("Please choose a size.")
     }
     $("#total").text(newOrders)
-
   })
 })
