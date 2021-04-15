@@ -1,8 +1,9 @@
 // -----Utility Logic-----
 
 // -----Business Logic-----
-function Pizza(size) {
+function Pizza(size, topping) {
   this.size = size;
+  this.topping = topping;
   this.price = 0;
 }
 
@@ -15,6 +16,15 @@ Pizza.prototype.addPrice = function (price) {
     this.price += 12;
   } else {
     return alert("Please enter a size!")
+  }
+  if (this.topping === "pepperoni") {
+    this.price += 3
+  } else if (this.topping === "meat") {
+    this.price += 4
+  } else if (this.topping === "vege") {
+    this.price += 2
+  } else {
+    this.price += 0;
   }
 }
 
