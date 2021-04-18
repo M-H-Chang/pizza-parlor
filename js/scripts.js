@@ -12,8 +12,10 @@ Pizza.prototype.addPrice = function () {
     this.price += 8;
   } else if (this.size === "medium") {
     this.price += 10;
-  } else {
+  } else if (this.price === "large") {
     this.price += 12;
+  } else {
+    return alert("Please choose a size.")
   }
   if (this.topping === "pepperoni") {
     this.price += 3
