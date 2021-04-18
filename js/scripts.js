@@ -7,15 +7,13 @@ function Pizza(size, topping) {
   this.price = 0;
 }
 
-Pizza.prototype.addPrice = function (price) {
+Pizza.prototype.addPrice = function () {
   if (this.size === "small") {
     this.price += 8;
   } else if (this.size === "medium") {
     this.price += 10;
-  } else if (this.size === "large") {
-    this.price += 12;
   } else {
-    return alert("Please enter a size!")
+    this.price += 12;
   }
   if (this.topping === "pepperoni") {
     this.price += 3
@@ -24,25 +22,18 @@ Pizza.prototype.addPrice = function (price) {
   } else if (this.topping === "vege") {
     this.price += 2
   } else {
-    this.price += 0;
-  }
-}
+    this.price;
+  } return this.price
+}  
 
 // -----User Interface Logic-----
 $(document).ready(function () {
   $("#form").submit(function (event) {
     event.preventDefault();
-    let newOrders = [];
     const radio = $("input:radio[name=type]:checked").val();
-    if (radio == "small") {
-      newOrders.push("10")
-    } else if (radio == "medium") {
-      newOrders.push("12")
-    } else if (radio == "large") {
-      newOrders.push("14")
-    } else {
-      return alert("Please choose a size.")
-    }
-    $("#total").text(newOrders)
+    const select = $("#toppings :selected").val();
+    let newOrders = new Pizza(radio, select)
+    newOrders.addPrice();
+    $("#total").text(newOrders.price)
   })
 })
